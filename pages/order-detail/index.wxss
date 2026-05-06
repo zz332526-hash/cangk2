@@ -1,0 +1,7 @@
+.container{ padding:24rpx; padding-bottom:140rpx; }
+.block{ padding:24rpx; margin-bottom:16rpx; }
+.row{ display:flex; justify-content:space-between; padding:12rpx 0; }
+.sub-text{ color:#6b7280; font-size:24rpx; line-height:1.6; }
+.pay{ font-weight:700; color:#ef4444; }
+.timeline-item{ padding:12rpx 0; border-left:4rpx solid #e5e7eb; padding-left:16rpx; margin-left:8rpx; }
+.reorder-btn{ position:fixed; bottom:32rpx; left:24rpx; right:24rpx; background:#111827; color:#fff; }

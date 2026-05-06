@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/orders/index"
+    "pages/orders/index",
+    "pages/order-detail/index"
   ],
   "window": {
     "navigationBarTitleText": "微点餐",

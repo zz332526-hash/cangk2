@@ -1,15 +1,24 @@
 <view class="container">
-  <view class="card block">
-    <view class="section-title">购物车明细</view>
-    <block wx:if="{{cart.length}}">
-      <block wx:for="{{cart}}" wx:key="index">
-        <view class="row">
-          <text>{{item.name}}</text>
-          <text>¥{{item.price}}</text>
-        </view>
-      </block>
-      <view class="total">应付：¥{{total}}</view>
+  <scroll-view scroll-x class="tabs">
+    <block wx:for="{{tabs}}" wx:key="key">
+      <view class="tab-item {{activeTab === item.key ? 'active' : ''}}" data-key="{{item.key}}" bindtap="switchTab">{{item.label}}</view>
     </block>
-    <view wx:else class="sub-text">购物车为空，先去加几道菜吧～</view>
-  </view>
+  </scroll-view>
+
+  <block wx:if="{{orderList.length}}">
+    <block wx:for="{{orderList}}" wx:key="id">
+      <view class="card order-card" data-id="{{item.id}}" bindtap="openDetail">
+        <view class="row header-row">
+          <text class="store-name">{{item.storeName}}</text>
+          <text class="sub-text">{{item.statusLabel}}</text>
+        </view>
+        <view class="sub-text">{{item.summary}}</view>
+        <view class="row amount-row">
+          <text>实付 ¥{{item.payAmount}}</text>
+          <text class="sub-text">下单时间 {{item.orderTime}}</text>
+        </view>
+      </view>
+    </block>
+  </block>
+  <view wx:else class="empty">当前状态暂无订单</view>
 </view>
