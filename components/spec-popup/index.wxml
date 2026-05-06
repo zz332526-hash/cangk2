@@ -1,0 +1,19 @@
+<view wx:if="{{visible}}" class="popup-wrap">
+  <view class="mask" bindtap="onClose"></view>
+  <view class="panel" catchtap="noop">
+    <view class="header"><view class="title">选择规格</view><view class="price">¥{{totalPrice}}</view></view>
+    <scroll-view scroll-y class="content">
+      <block wx:for="{{renderGroups}}" wx:key="name" wx:for-index="gidx">
+        <view class="group">
+          <view class="group-title">{{item.name}}<text class="mode">（{{item.type === 'single' ? '单选' : '多选'}}）</text></view>
+          <view class="options">
+            <view wx:for="{{item.options}}" wx:key="name" wx:for-index="oidx" class="option {{item2.checked ? 'active' : ''}}" data-gidx="{{gidx}}" data-oidx="{{oidx}}" bindtap="onToggle">
+              <text>{{item2.name}}</text><text wx:if="{{item2.price > 0}}">+¥{{item2.price}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+    <view class="footer"><view class="selected">已选：{{selectedText || '未选择'}}</view><button class="add-btn" bindtap="onAdd">加入购物车 ¥{{totalPrice}}</button></view>
+  </view>
+</view>

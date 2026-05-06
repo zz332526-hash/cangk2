@@ -1,0 +1,14 @@
+.popup-wrap { position: fixed; inset: 0; z-index: 99; }
+.mask { position: absolute; inset: 0; background: rgba(0,0,0,.5); }
+.panel { position: absolute; left: 0; right: 0; bottom: 0; height: 70vh; background: #fff; border-radius: 20rpx 20rpx 0 0; display:flex; flex-direction:column; }
+.header { padding: 24rpx; display:flex; justify-content:space-between; font-weight:600; }
+.content { flex:1; padding: 0 24rpx; }
+.group { margin-bottom: 20rpx; }
+.group-title { font-size: 28rpx; margin-bottom: 12rpx; }
+.mode { color:#999; font-size:22rpx; }
+.options { display:flex; flex-wrap:wrap; gap: 12rpx; }
+.option { background:#f5f6fa; border-radius: 999rpx; padding: 12rpx 20rpx; font-size:24rpx; display:flex; gap:10rpx; }
+.option.active { background:#fff5d9; color:#d88a00; border:1rpx solid #ffd36a; }
+.footer { padding: 16rpx 24rpx 24rpx; border-top:1rpx solid #eee; }
+.selected { color:#666; font-size:24rpx; margin-bottom: 10rpx; }
+.add-btn { background:#ffcc32; color:#222; border-radius: 999rpx; }

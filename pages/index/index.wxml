@@ -27,7 +27,7 @@
   <view class="section menu card">
     <view class="section-title">招牌菜单</view>
     <block wx:for="{{menuList}}" wx:key="id">
-      <view class="menu-row">
+      <view class="menu-row" data-id="{{item.id}}" bindtap="goDetail">
         <image class="menu-img" src="{{item.image}}" mode="aspectFill"/>
         <view class="menu-info">
           <view class="food-name">{{item.name}}</view>

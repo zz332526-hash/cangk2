@@ -1,10 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/cart/index",
-    "pages/checkout/index",
-    "pages/order-success/index",
-    "pages/orders/index"
+    "pages/orders/index",
+    "pages/goods-detail/index"
   ],
   "window": {
     "navigationBarTitleText": "微点餐",

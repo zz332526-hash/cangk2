@@ -40,6 +40,10 @@ Page({
     this.setData({ cartCount, totalPrice })
     wx.showToast({ title: '已加入购物车', icon: 'success' })
   },
+
+  goDetail(e) {
+    wx.navigateTo({ url: '/pages/goods-detail/index?id=' + e.currentTarget.dataset.id })
+  },
   goOrders() {
     wx.navigateTo({ url: '/pages/cart/index' })
   }
