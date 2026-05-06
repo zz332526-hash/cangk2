@@ -1,0 +1,36 @@
+<view class="container">
+  <image class="hero" src="{{goods.image}}" mode="aspectFill"/>
+  <view class="card block">
+    <view class="name-row">
+      <view class="name">{{goods.name}}</view>
+      <view class="price">¥{{goods.basePrice}}</view>
+    </view>
+    <view class="sub">{{goods.desc}}</view>
+    <view class="tags">
+      <text wx:for="{{goods.tags}}" wx:key="*this" class="tag">{{item}}</text>
+    </view>
+  </view>
+
+  <view class="card block">
+    <view class="title">图文详情</view>
+    <image wx:for="{{goods.detailImages}}" wx:key="*this" class="detail-img" src="{{item}}" mode="widthFix"/>
+  </view>
+
+  <view class="card block">
+    <view class="title">用户评价摘要</view>
+    <view class="review-row">
+      <text class="score">{{goods.reviewSummary.score}} 分</text>
+      <text class="sub">好评率 {{goods.reviewSummary.goodRate}}</text>
+    </view>
+    <view class="tags">
+      <text wx:for="{{goods.reviewSummary.keywords}}" wx:key="*this" class="tag">{{item}}</text>
+    </view>
+  </view>
+
+  <view class="bottom-bar">
+    <button class="cart-btn" bindtap="goOrders">查看购物车</button>
+    <button class="primary" bindtap="openSpec">加入购物车</button>
+  </view>
+
+  <spec-popup visible="{{showSpecPopup}}" groups="{{specGroups}}" basePrice="{{goods.basePrice}}" bind:close="closeSpec" bind:confirm="onSpecConfirm"/>
+</view>

@@ -5,7 +5,7 @@
       <block wx:for="{{cart}}" wx:key="index">
         <view class="row">
           <text>{{item.name}}</text>
-          <text>¥{{item.price}}</text>
+          <view class="right"><text>¥{{item.price}}</text><text wx:if="{{item.specText}}" class="spec">{{item.specText}}</text></view>
         </view>
       </block>
       <view class="total">应付：¥{{total}}</view>
