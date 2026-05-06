@@ -1,0 +1,32 @@
+page {
+  --brand: #ff6b6b;
+  --brand-soft: #ffe7e7;
+  --text-1: #1f2937;
+  --text-2: #6b7280;
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  background: var(--bg);
+  color: var(--text-1);
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.card {
+  background: var(--card);
+  border-radius: 20rpx;
+  box-shadow: 0 8rpx 24rpx rgba(31, 41, 55, 0.08);
+}
+.section-title {
+  font-size: 34rpx;
+  font-weight: 700;
+}
+.sub-text {
+  color: var(--text-2);
+  font-size: 24rpx;
+}
+.primary-btn {
+  background: linear-gradient(135deg, #ff7f7f, #ff5d8f);
+  color: #fff;
+  border-radius: 999rpx;
+  padding: 14rpx 30rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+}

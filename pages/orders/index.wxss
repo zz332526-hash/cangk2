@@ -1,0 +1,4 @@
+.container{ padding:24rpx; }
+.block{ padding:24rpx; }
+.row{ display:flex; justify-content:space-between; padding:16rpx 0; border-bottom:1rpx solid #f3f4f6; }
+.total{ margin-top:16rpx; font-size:34rpx; font-weight:700; color:#ef4444; text-align:right; }

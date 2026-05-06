@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="card block">
+    <view class="section-title">购物车明细</view>
+    <block wx:if="{{cart.length}}">
+      <block wx:for="{{cart}}" wx:key="index">
+        <view class="row">
+          <text>{{item.name}}</text>
+          <text>¥{{item.price}}</text>
+        </view>
+      </block>
+      <view class="total">应付：¥{{total}}</view>
+    </block>
+    <view wx:else class="sub-text">购物车为空，先去加几道菜吧～</view>
+  </view>
+</view>
