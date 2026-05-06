@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="card section">
+    <view class="sec-title">配送方式</view>
+    <view class="tab-row">
+      <view class="tab {{mode === 'delivery' ? 'active' : ''}}" data-mode="delivery" bindtap="switchMode">外卖配送</view>
+      <view class="tab {{mode === 'pickup' ? 'active' : ''}}" data-mode="pickup" bindtap="switchMode">到店自取</view>
+    </view>
+  </view>
+
+  <view class="card section form">
+    <view class="line">
+      <text>备注</text>
+      <input placeholder="口味偏好、忌口等" value="{{remark}}" bindinput="inputRemark"/>
+    </view>
+    <view class="line">
+      <text>餐具数量</text>
+      <view class="qty-wrap">
+        <text class="qty-btn" data-step="-1" bindtap="changeTableware">-</text>
+        <text class="qty">{{tableware}}</text>
+        <text class="qty-btn" data-step="1" bindtap="changeTableware">+</text>
+      </view>
+    </view>
+    <view class="line">
+      <text>优惠券</text>
+      <text class="coupon">{{couponText}} ></text>
+    </view>
+  </view>
+
+  <view class="card section amount">
+    <view class="line"><text>商品金额</text><text>¥{{goodsAmount}}</text></view>
+    <view class="line"><text>打包费</text><text>¥2.00</text></view>
+    <view class="line"><text>配送费</text><text>¥4.00</text></view>
+    <view class="line discount"><text>优惠</text><text>-¥5.00</text></view>
+    <view class="line total"><text>应付</text><text>¥{{payableAmount}}</text></view>
+  </view>
+
+  <button class="submit-btn" loading="{{submitLoading}}" disabled="{{submitLoading}}" bindtap="submitOrder">{{submitLoading ? '提交中...' : '提交订单'}}</button>
+</view>

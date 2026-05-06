@@ -1,6 +1,9 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/cart/index",
+    "pages/checkout/index",
+    "pages/order-success/index",
     "pages/orders/index"
   ],
   "window": {
