@@ -1,0 +1,51 @@
+<view class="container">
+  <view class="hero card">
+    <view>
+      <view class="store-title">小满轻食茶饮</view>
+      <view class="sub-text">营业中 · 约 25 分钟送达</view>
+    </view>
+    <view class="tag">满30减8</view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">今日推荐</view>
+    <scroll-view scroll-x class="recommend-scroll">
+      <block wx:for="{{recommendList}}" wx:key="id">
+        <view class="food-card card">
+          <image class="food-img" src="{{item.image}}" mode="aspectFill"/>
+          <view class="food-name">{{item.name}}</view>
+          <view class="sub-text">月售 {{item.sold}}</view>
+          <view class="price-row">
+            <text class="price">¥{{item.price}}</text>
+            <button class="add-btn" size="mini" data-id="{{item.id}}" bindtap="addToCart">+</button>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <view class="section menu card">
+    <view class="section-title">招牌菜单</view>
+    <block wx:for="{{menuList}}" wx:key="id">
+      <view class="menu-row">
+        <image class="menu-img" src="{{item.image}}" mode="aspectFill"/>
+        <view class="menu-info">
+          <view class="food-name">{{item.name}}</view>
+          <view class="sub-text">{{item.desc}}</view>
+          <view class="price-row">
+            <text class="price">¥{{item.price}}</text>
+            <button class="add-btn" size="mini" data-id="{{item.id}}" bindtap="addToCart">加入</button>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="cart-bar" bindtap="goOrders">
+    <view>
+      <view class="cart-title">已选 {{cartCount}} 件</view>
+      <view class="sub-text">合计 ¥{{totalPrice}}</view>
+    </view>
+    <view class="primary-btn">去结算</view>
+  </view>
+</view>
