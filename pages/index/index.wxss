@@ -1,18 +1,44 @@
-.container { padding: 24rpx 24rpx 160rpx; }
-.hero { display:flex; justify-content:space-between; align-items:center; padding: 28rpx; background: linear-gradient(140deg,#fff,#fff1f1); }
-.store-title{ font-size: 38rpx; font-weight: 700; margin-bottom: 8rpx; }
-.tag{ background: var(--brand-soft); color: var(--brand); font-size: 24rpx; padding: 10rpx 16rpx; border-radius: 999rpx; }
-.section{ margin-top: 26rpx; }
-.recommend-scroll{ white-space: nowrap; margin-top: 14rpx; }
-.food-card{ display:inline-block; width: 280rpx; padding: 14rpx; margin-right: 16rpx; }
-.food-img{ width:252rpx; height:170rpx; border-radius: 14rpx; }
-.food-name{ font-size: 28rpx; font-weight: 600; margin-top: 8rpx; }
-.price-row{ display:flex; justify-content:space-between; align-items:center; margin-top: 10rpx; }
-.price{ color:#ef4444; font-weight:700; }
-.add-btn{ margin:0; background:#ff6678 !important; color:#fff !important; border-radius:999rpx; min-width:72rpx; }
-.menu{ padding: 18rpx; }
-.menu-row{ display:flex; margin-top: 16rpx; }
-.menu-img{ width:140rpx; height:140rpx; border-radius:14rpx; margin-right: 14rpx; }
-.menu-info{ flex:1; }
-.cart-bar{ position:fixed; left:24rpx; right:24rpx; bottom:28rpx; background:#111827; color:#fff; border-radius:24rpx; padding:18rpx 22rpx; display:flex; justify-content:space-between; align-items:center; }
-.cart-title{ font-size: 30rpx; font-weight: 700; margin-bottom: 4rpx; }
+.container { padding: 24rpx 24rpx 170rpx; }
+.hero-bg { background: linear-gradient(160deg, #ffe5ec, #fff4e8); border-radius: 28rpx; padding: 8rpx; }
+.hero { display: flex; justify-content: space-between; align-items: flex-start; padding: 28rpx; }
+.store-title { font-size: 38rpx; font-weight: 700; margin-bottom: 8rpx; }
+.delivery-text { font-size: 24rpx; color: #6b7280; margin-top: 8rpx; }
+.status-pill { background: #22c55e; color: #fff; font-size: 22rpx; padding: 10rpx 16rpx; border-radius: 999rpx; }
+.section { margin-top: 26rpx; }
+.category { padding: 20rpx; }
+.category-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18rpx 8rpx; margin-top: 16rpx; }
+.category-item { text-align: center; }
+.category-icon { width: 72rpx; height: 72rpx; border-radius: 20rpx; margin: 0 auto 10rpx; background: #ffe8ef; display: flex; align-items: center; justify-content: center; font-size: 34rpx; }
+.category-name { font-size: 24rpx; color: #374151; }
+.recommend-scroll { white-space: nowrap; margin-top: 14rpx; }
+.food-card { display: inline-block; width: 280rpx; padding: 14rpx; margin-right: 16rpx; }
+.food-img { width: 252rpx; height: 170rpx; border-radius: 14rpx; }
+.food-name { font-size: 28rpx; font-weight: 600; margin-top: 8rpx; }
+.price-row { display: flex; justify-content: space-between; align-items: center; margin-top: 10rpx; }
+.price { color: #ef4444; font-weight: 700; }
+.add-btn { margin: 0; background: #ff6678 !important; color: #fff !important; border-radius: 999rpx; min-width: 72rpx; }
+.cart-bar { position: fixed; left: 24rpx; right: 24rpx; bottom: 28rpx; border-radius: 24rpx; padding: 18rpx 22rpx; display: flex; justify-content: space-between; align-items: center; transition: all 0.25s; }
+.cart-inactive { background: #e5e7eb; color: #9ca3af; }
+.cart-active { background: #111827; color: #fff; box-shadow: 0 12rpx 40rpx rgba(17, 24, 39, 0.28); }
+.cart-title { font-size: 30rpx; font-weight: 700; margin-bottom: 4rpx; }
+.checkout-btn { padding: 14rpx 26rpx; border-radius: 999rpx; font-size: 26rpx; font-weight: 600; }
+.checkout-inactive { background: #d1d5db; color: #9ca3af; }
+.checkout-active { background: linear-gradient(135deg, #f97316, #ef4444); color: #fff; }
+
+.skeleton-wrap { margin-top: 8rpx; }
+.skeleton-hero, .skeleton-grid, .skeleton-title, .skeleton-card, .skeleton-cart {
+  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 37%, #f3f4f6 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.5s ease infinite;
+  border-radius: 20rpx;
+}
+.skeleton-hero { height: 200rpx; }
+.skeleton-grid { height: 220rpx; margin-top: 22rpx; }
+.skeleton-title { width: 180rpx; height: 42rpx; margin: 26rpx 0 14rpx; }
+.skeleton-card { display: inline-block; width: 280rpx; height: 290rpx; margin-right: 16rpx; }
+.skeleton-cart { position: fixed; left: 24rpx; right: 24rpx; bottom: 28rpx; height: 100rpx; }
+
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: 0 0; }
+}

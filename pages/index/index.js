@@ -7,10 +7,28 @@ const mock = [
 
 Page({
   data: {
-    recommendList: mock.slice(0, 3),
-    menuList: mock,
+    loading: true,
+    categoryList: [
+      { id: 1, name: '饮品', icon: '🥤' },
+      { id: 2, name: '主食', icon: '🍱' },
+      { id: 3, name: '小吃', icon: '🍢' },
+      { id: 4, name: '甜品', icon: '🍰' },
+      { id: 5, name: '轻食', icon: '🥗' },
+      { id: 6, name: '咖啡', icon: '☕' },
+      { id: 7, name: '套餐', icon: '🍽️' },
+      { id: 8, name: '更多', icon: '🧾' }
+    ],
+    recommendList: [],
     cartCount: 0,
     totalPrice: '0.00'
+  },
+  onLoad() {
+    setTimeout(() => {
+      this.setData({
+        loading: false,
+        recommendList: mock
+      })
+    }, 450)
   },
   addToCart(e) {
     const id = e.currentTarget.dataset.id
